@@ -14,3 +14,7 @@ __pycache__/
 # Operating system files
 .DS_Store
 Thumbs.db
+
+# Generated project data
+data/processed/
+*.db
