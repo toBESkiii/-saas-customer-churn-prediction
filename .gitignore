@@ -16,5 +16,6 @@ __pycache__/
 Thumbs.db
 
 # Generated project data
-data/processed/
+data/processed/*
+!data/processed/customer_health_scores.csv
 *.db
