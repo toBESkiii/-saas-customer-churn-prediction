@@ -88,7 +88,7 @@ The Streamlit dashboard provides Customer Success teams with an overview of cust
 
 MLflow was used to track and compare Logistic Regression, Balanced Logistic Regression, Random Forest and XGBoost experiments.
 
-![MLflow Experiment Comparison](screenshots/MI_flow.png)
+![MLflow Experiment Comparison](screenshots/Ml_flow.png)
 
 ### Prediction API
 
@@ -100,7 +100,7 @@ The trained churn model is exposed through a FastAPI service with interactive Sw
 
 GitHub Actions automatically installs the test environment and runs the pytest API test suite when code changes are pushed.
 
-![GitHub Actions CI](screenshots/continuous%20integration%20check.png)
+![GitHub Actions CI](screenshots/Ci_check.png)
 
 ## Tech Stack
 
@@ -149,6 +149,22 @@ Detailed technical documentation is available in the `docs/` directory:
 - Model performance indicates limited predictive signal.
 - Risk scores should therefore support, rather than replace, Customer Success judgement.
 
+## Project Status
+
+Core MVP completed:
+
+- data analysis and feature engineering;
+- model comparison and evaluation;
+- customer health scoring;
+- MLflow experiment tracking;
+- Streamlit dashboard;
+- FastAPI prediction service;
+- Docker containerisation;
+- automated API testing;
+- GitHub Actions CI.
+
+Further improvements can include stronger feature engineering, model calibration, more robust API validation, monitoring and cloud deployment.
+
 ## Project Structure
 
 ```text
@@ -193,18 +209,3 @@ saas-customer-churn-prediction/
 ├── requirements-test.txt
 └── README.md
 
-## Project Status
-
-Core MVP completed:
-
-- data analysis and feature engineering;
-- model comparison and evaluation;
-- customer health scoring;
-- MLflow experiment tracking;
-- Streamlit dashboard;
-- FastAPI prediction service;
-- Docker containerisation;
-- automated API testing;
-- GitHub Actions CI.
-
-Further improvements can include stronger feature engineering, model calibration, more robust API validation, monitoring and cloud deployment.
