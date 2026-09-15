@@ -76,6 +76,32 @@ Holdout performance:
 
 The model showed modest predictive separation, so its outputs are treated as customer-risk prioritisation signals rather than definitive churn predictions.
 
+## Project Demo
+
+### Customer Health Dashboard
+
+The Streamlit dashboard provides Customer Success teams with an overview of customer risk, health scores and retention priorities.
+
+![Customer Health Dashboard](screenshots/screenshotsdashboard_overview.png)
+
+### ML Experiment Tracking
+
+MLflow was used to track and compare Logistic Regression, Balanced Logistic Regression, Random Forest and XGBoost experiments.
+
+![MLflow Experiment Comparison](screenshots/MI_flow.png)
+
+### Prediction API
+
+The trained churn model is exposed through a FastAPI service with interactive Swagger documentation.
+
+![FastAPI Swagger Documentation](screenshots/screenshotsapi_swagger.png)
+
+### Continuous Integration
+
+GitHub Actions automatically installs the test environment and runs the pytest API test suite when code changes are pushed.
+
+![GitHub Actions CI](screenshots/continuous%20integration%20check.png)
+
 ## Tech Stack
 
 **Data & Analytics:** Python, Pandas, NumPy, SQL, SQLite, SQLAlchemy  
@@ -122,6 +148,50 @@ Detailed technical documentation is available in the `docs/` directory:
 - The project uses a static customer snapshot rather than a fully time-aware production prediction window.
 - Model performance indicates limited predictive signal.
 - Risk scores should therefore support, rather than replace, Customer Success judgement.
+
+## Project Structure
+
+```text
+saas-customer-churn-prediction/
+│
+├── api/
+│   └── main.py
+│
+├── dashboard/
+│   └── app.py
+│
+├── data/
+│   ├── raw/
+│   └── processed/
+│
+├── docs/
+│   ├── data_dictionary.md
+│   ├── missing_values_strategy.md
+│   └── analysis_findings.md
+│
+├── models/
+│   └── balanced_logistic_churn_pipeline.joblib
+│
+├── notebooks/
+│   ├── 01_data_inspection.ipynb
+│   ├── 02_sql_database_setup.ipynb
+│   ├── 03_feature_engineering.ipynb
+│   └── 04_model_preprocessing.ipynb
+│
+├── screenshots/
+├── sql/
+├── tests/
+│   └── test_api.py
+│
+├── .github/
+│   └── workflows/
+│       └── ci.yml
+│
+├── Dockerfile
+├── requirements.txt
+├── requirements-api.txt
+├── requirements-test.txt
+└── README.md
 
 ## Project Status
 
