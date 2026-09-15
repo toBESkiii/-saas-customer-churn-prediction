@@ -94,11 +94,13 @@ MLflow was used to track and compare Logistic Regression, Balanced Logistic Regr
 
 The trained churn model is exposed through a FastAPI service with interactive Swagger documentation.
 
+
 ![FastAPI Swagger Documentation](screenshots/screenshotsapi_swagger.png)
 
 ### Continuous Integration
 
 GitHub Actions automatically installs the test environment and runs the pytest API test suite when code changes are pushed.
+
 
 ![GitHub Actions CI](screenshots/Ci_check.png)
 
